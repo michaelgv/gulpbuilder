@@ -1,6 +1,6 @@
 {
   "name": "gulpbuildproject",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Gulp Build Project",
   "main": "index.js",
   "scripts": {

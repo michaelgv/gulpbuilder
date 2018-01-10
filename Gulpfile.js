@@ -38,9 +38,18 @@ gulp.task('pre-release-builder', gulp.series('builder-bump-version', 'pre-releas
     done()
 }))
 
-/** Default */
+/** Install builder deps */
 
-gulp.task('default', function (done) {
+gulp.task('install-deps', function (done) {
     spawn('npm', ['install'], { cwd: cwd, stdio: 'inherit' })
         .on('close', done)
+})
+
+/** Defaults */
+
+gulp.task('default', function (done) {
+    log.error('Please select a proper task.')
+    log.error('In order to globally release, run gulp release-all')
+    log.error('Thanks!')
+    done()
 })
