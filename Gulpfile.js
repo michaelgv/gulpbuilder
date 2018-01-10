@@ -19,7 +19,7 @@ gulp.task('builder-bump-version', function () {
 })
 
 /** Pre-release tasks */
-gulp.task('pre-release-builder-internal', function () {
+gulp.task('pre-release-builder-internal', function (done) {
     let commit = () => {
         log.info('commit')
         spawn('git', ['commit', '-m', '"[Release] Automated builder release version '+require('./package.json').version+'"'], { cwd: cwd, stdio: 'inherit'})
@@ -28,6 +28,7 @@ gulp.task('pre-release-builder-internal', function () {
     let push = () => {
         log.info('push')
         spawn('git', ['push', '-u', 'origin', 'master'], { cwd: cwd, stdio: 'inherit'})
+        done()
     }
     spawn('git', ['add', '*'], { cwd: cwd, stdio: 'inherit' })
         .on('close', commit)
