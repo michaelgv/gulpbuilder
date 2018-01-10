@@ -1,6 +1,6 @@
 {
   "name": "gulpbuildproject",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "description": "Gulp Build Project",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/michaelgv/gulpbuildproject#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-bump": "^3.0.0",
     "gulp-git": "^2.5.0",
     "gulp-spawn": "^0.4.0",
